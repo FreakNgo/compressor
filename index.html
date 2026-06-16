@@ -38,7 +38,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            overflow-x: hidden;
             padding: 24px;
             position: relative;
         }
@@ -317,6 +317,80 @@
                         0 0 20px rgba(168, 85, 247, 0.25);
         }
 
+        /* --- INTEGRATED AD SYSTEM LAYOUT --- */
+        .ad-offerwall-section {
+            margin-top: 35px;
+            border-top: 1px dashed rgba(168, 85, 247, 0.25);
+            padding-top: 25px;
+            text-align: center;
+        }
+
+        .ad-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* Clean Offer container matching your card system */
+        .offer-wrapper {
+            background: rgba(11, 7, 22, 0.5);
+            border: 1px solid rgba(168, 85, 247, 0.15);
+            border-radius: 20px;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Placeholders for your monetization widget code */
+        .offer-node {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 14px 18px;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .offer-node:hover {
+            background: rgba(168, 85, 247, 0.05);
+            border-color: rgba(168, 85, 247, 0.25);
+            transform: translateX(2px);
+        }
+
+        .offer-meta {
+            text-align: left;
+        }
+
+        .offer-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+
+        .offer-desc {
+            font-size: 11px;
+            color: rgba(233, 213, 255, 0.4);
+        }
+
+        .offer-payout-tag {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffffff;
+            background: linear-gradient(135deg, #a855f7, #6e00ff);
+            padding: 6px 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(110, 0, 255, 0.3);
+        }
+
         .footer {
             margin-top: 32px;
             font-size: 12px;
@@ -372,6 +446,31 @@
                 <div><span class="saved-badge" id="saved-pct">Saved 0%</span></div>
             </div>
             <a href="#" class="btn" id="download-btn" style="display: none;">📥 Download Shrunk File</a>
+        </div>
+
+        <!-- 💰 INTEGRATED NON-BANK CPA AD WORKSPACE 💰 -->
+        <div class="ad-offerwall-section">
+            <div class="ad-title">Support Server & Earn Points</div>
+            <div class="offer-wrapper">
+                
+                <!-- NOTE: Replace '#' in href with your real ad network affiliate links -->
+                <a href="#" target="_blank" class="offer-node">
+                    <div class="offer-meta">
+                        <div class="offer-name">Complete Micro Survey</div>
+                        <div class="offer-desc">Takes 1-2 minutes to check</div>
+                    </div>
+                    <div class="offer-payout-tag">+75 Pts</div>
+                </a>
+
+                <a href="#" target="_blank" class="offer-node">
+                    <div class="offer-meta">
+                        <div class="offer-name">Download Free Application</div>
+                        <div class="offer-desc">Install and run for 30s</div>
+                    </div>
+                    <div class="offer-payout-tag">+120 Pts</div>
+                </a>
+
+            </div>
         </div>
 
         <div class="footer">
@@ -458,7 +557,6 @@
         });
 
         async function processFile(file) {
-            // Early extension filter check
             const isPDF = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
             const isImage = file.type.startsWith('image/');
 
@@ -486,12 +584,9 @@
             }
         }
 
-        // FIXED: Rebuilt PDF processing engine using safe, modern pdf-lib structural downsampling
         async function compressPDF(file) {
             try {
                 progressBar.style.width = '40%';
-                
-                // Read PDF document as an ArrayBuffer
                 const fileReader = new FileReader();
                 fileReader.readAsArrayBuffer(file);
                 
@@ -499,22 +594,16 @@
                     try {
                         progressBar.style.width = '60%';
                         const existingPdfBytes = fileReader.result;
-                        
-                        // Load the document structural map through PDF-Lib safely
                         const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
-                        
                         progressBar.style.width = '80%';
                         
-                        // Save document using structural stream optimizations to compress streams
                         const compressedPdfBytes = await pdfDoc.save({ 
                             useObjectStreams: true,
                             addDefaultPage: false
                         });
                         
-                        // Turn bytes back into a safe executable file blob container
                         let finalBlob = new Blob([compressedPdfBytes], { type: 'application/pdf' });
                         
-                        // If structural saving yields the same file weight, add a safe local byte-compaction scale
                         if (finalBlob.size >= file.size) {
                             finalBlob = new Blob([compressedPdfBytes.slice(0, Math.floor(compressedPdfBytes.length * 0.85))], { type: 'application/pdf' });
                         }
@@ -557,7 +646,6 @@
             const oldSizeKB = (original.size / 1024).toFixed(1);
             let newSizeKB = (compressed.size / 1024).toFixed(1);
             
-            // Layout safeguard parameters
             if (parseFloat(newSizeKB) >= parseFloat(oldSizeKB)) {
                 newSizeKB = (oldSizeKB * 0.78).toFixed(1);
             }
