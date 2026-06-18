@@ -9,18 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* Premium Purple & Liquid Rainbow Design System Tokens */
+        /* Ultra Premium Obsidian & Cosmic Design Engine Tokens */
         :root {
-            --primary: #a855f7;
-            --primary-hover: #9333ea;
-            --primary-glow: rgba(168, 85, 247, 0.4);
-            --bg-dark: #07040e; 
-            --card-bg: rgba(18, 12, 34, 0.75);
-            --card-border: rgba(168, 85, 247, 0.2);
-            --text-light: #f3e8ff;
-            --text-muted: #c084fc;
-            --success: #34d399;
-            --success-glow: rgba(52, 211, 153, 0.15);
+            --primary: #c084fc;
+            --primary-hover: #a855f7;
+            --primary-glow: rgba(192, 132, 252, 0.25);
+            --bg-dark: #03000a; 
+            --card-bg: rgba(10, 6, 22, 0.65);
+            --card-border: rgba(192, 132, 252, 0.15);
+            --text-light: #f8fafc;
+            --text-muted: #a78bfa;
+            --success: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.12);
         }
 
         * {
@@ -38,12 +38,12 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            overflow-x: hidden;
+            overflow: hidden;
             padding: 24px;
             position: relative;
         }
 
-        /* Ambient Dynamic Mesh Background */
+        /* Ambient Cosmic Mesh Depth Generator */
         body::before {
             content: "";
             position: absolute;
@@ -51,31 +51,31 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle at 25% 25%, #2e1065 0%, transparent 40%),
-                        radial-gradient(circle at 75% 75%, #4c1d95 0%, transparent 45%),
-                        radial-gradient(circle at 50% 50%, #0b061a 0%, transparent 60%);
-            animation: meshMove 20s infinite alternate ease-in-out;
+            background: radial-gradient(circle at 20% 30%, rgba(76, 29, 149, 0.3) 0%, transparent 45%),
+                        radial-gradient(circle at 80% 70%, rgba(124, 58, 237, 0.25) 0%, transparent 45%),
+                        radial-gradient(circle at 50% 50%, rgba(15, 10, 36, 1) 0%, transparent 70%);
+            animation: meshMove 25s infinite alternate ease-in-out;
             z-index: -1;
         }
 
         @keyframes meshMove {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-3%, 4%) scale(1.05); }
-            100% { transform: translate(3%, -4%) scale(1); }
+            0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            50% { transform: translate(-2%, 3%) scale(1.03) rotate(2deg); }
+            100% { transform: translate(2%, -3%) scale(1) rotate(0deg); }
         }
 
-        /* Premium Fluid Rainbow Text Engine */
+        /* Liquid Rainbow Text Typography */
         .rainbow-text {
             font-family: 'Space Grotesk', sans-serif;
             background: linear-gradient(
                 45deg, 
-                #ff7675, #fd79a8, #a855f7, #74b9ff, #55efc4, #fd79a8, #ff7675
+                #ff7675, #fd79a8, #c084fc, #74b9ff, #55efc4, #fd79a8, #ff7675
             );
-            background-size: 400% 400%;
+            background-size: 300% 300%;
             color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
-            animation: liquidGradient 8s ease infinite;
+            animation: liquidGradient 6s ease infinite;
             display: inline-block;
         }
 
@@ -88,41 +88,41 @@
         /* SCREEN 1: Brand Intro */
         .stage-1 {
             text-align: center;
-            animation: fadeIn 0.6s ease forwards;
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         .brand-logo {
-            font-size: 72px;
+            font-size: 84px;
             font-weight: 800;
-            letter-spacing: -2px;
+            letter-spacing: -3px;
             margin-bottom: 5px;
-            filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.25));
+            filter: drop-shadow(0 0 40px rgba(192, 132, 252, 0.3));
         }
 
         /* SCREEN 2: Initiative Page Credits */
         .stage-2 {
             display: none;
             text-align: center;
-            animation: fadeIn 0.6s ease forwards;
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         .credit-title {
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 6px;
             color: var(--text-muted);
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             font-weight: 700;
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
         .credit-name {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 56px;
+            font-size: 64px;
             font-weight: 800;
             color: #ffffff;
-            letter-spacing: -1px;
-            text-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
+            letter-spacing: -2px;
+            text-shadow: 0 0 50px rgba(192, 132, 252, 0.35);
         }
 
         /* SCREEN 3: Cinematic Typography Engine */
@@ -130,146 +130,168 @@
             display: none;
             text-align: center;
             max-width: 95%;
-            width: 500px;
+            width: 550px;
         }
 
         .cinema-text {
-            font-size: 42px;
+            font-size: 46px;
             font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -1px;
+            line-height: 1.25;
+            letter-spacing: -1.5px;
             opacity: 0;
             display: none;
-            filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.15));
+            filter: drop-shadow(0 0 25px rgba(192, 132, 252, 0.2));
         }
 
         .fade-in-out-action {
-            animation: cinematicFade2s 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation: cinematicFade2s 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
         }
 
         @keyframes cinematicFade2s {
-            0% { opacity: 0; transform: scale(0.96); filter: blur(8px); }
+            0% { opacity: 0; transform: scale(0.95); filter: blur(12px); }
             15% { opacity: 1; transform: scale(1); filter: blur(0px); }
             85% { opacity: 1; transform: scale(1); filter: blur(0px); }
-            100% { opacity: 0; transform: scale(1.03); filter: blur(6px); }
+            100% { opacity: 0; transform: scale(1.04); filter: blur(8px); }
         }
 
-        /* SCREEN 4: Main Application Deck Workspace */
+        /* SCREEN 4: Main Application Workspace */
         .stage-4 {
             display: none;
             width: 100%;
-            max-width: 500px;
+            max-width: 480px;
             background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 40px 30px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            padding: 45px 35px;
             border-radius: 32px; 
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8),
-                        0 0 50px rgba(168, 85, 247, 0.08);
+            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.9),
+                        0 0 60px rgba(192, 132, 252, 0.05);
             border: 1px solid var(--card-border);
             text-align: center;
-            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         .app-title {
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 800;
-            margin-bottom: 8px;
-            letter-spacing: -1px;
+            margin-bottom: 10px;
+            letter-spacing: -1.5px;
         }
 
         .app-tagline {
             font-size: 14px;
-            color: rgba(233, 213, 255, 0.5);
-            margin-bottom: 32px;
+            color: rgba(248, 250, 252, 0.45);
+            margin-bottom: 35px;
+            font-weight: 500;
         }
 
-        /* Curvy UI Drag Drop Surface Container */
+        /* Drop Zone Interface */
         .drop-zone {
-            border: 2px dashed rgba(168, 85, 247, 0.35);
+            border: 1px dashed rgba(192, 132, 252, 0.3);
             border-radius: 24px; 
-            padding: 45px 20px;
+            padding: 50px 24px;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background: rgba(11, 7, 22, 0.4);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: rgba(5, 2, 15, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .drop-zone::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(192, 132, 252, 0.08) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .drop-zone:hover::before, .drop-zone.drag-over::before {
+            opacity: 1;
         }
 
         .drop-zone:hover, .drop-zone.drag-over {
             border-color: var(--primary);
-            background: rgba(168, 85, 247, 0.06);
-            box-shadow: inset 0 0 24px rgba(168, 85, 247, 0.1);
-            transform: scale(1.01);
+            border-style: solid;
+            box-shadow: 0 0 30px rgba(192, 132, 252, 0.1),
+                        inset 0 0 20px rgba(192, 132, 252, 0.05);
+            transform: translateY(-2px);
         }
 
         .drop-zone-icon {
-            font-size: 44px;
-            margin-bottom: 16px;
+            font-size: 46px;
+            margin-bottom: 18px;
             display: inline-block;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: drop-shadow(0 0 15px rgba(192, 132, 252, 0.4));
         }
 
         .drop-zone:hover .drop-zone-icon {
-            transform: translateY(-4px);
+            transform: translateY(-6px) scale(1.05);
         }
 
         .drop-zone-text {
             font-size: 15px;
-            font-weight: 500;
-            color: #f3e8ff;
+            font-weight: 600;
+            color: #f1f5f9;
+            letter-spacing: -0.2px;
         }
 
         .drop-zone-subtext {
-            font-size: 13px;
-            color: rgba(233, 213, 255, 0.35);
-            margin-top: 8px;
+            font-size: 12px;
+            color: rgba(248, 250, 252, 0.35);
+            margin-top: 10px;
+            font-weight: 500;
         }
 
         #file-input {
             display: none;
         }
 
-        /* Processing Metrics Box */
+        /* Pipeline Metrics Box */
         .status-container {
             margin-top: 24px;
             display: none;
             text-align: left;
-            background: rgba(8, 4, 18, 0.7);
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px solid rgba(168, 85, 247, 0.15);
+            background: rgba(4, 2, 10, 0.8);
+            padding: 24px;
+            border-radius: 24px;
+            border: 1px solid rgba(192, 132, 252, 0.1);
         }
 
         .file-info {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-size: 14px;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .file-name {
-            font-weight: 500;
+            font-weight: 600;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            max-width: 240px;
-            color: #f3e8ff;
+            max-width: 220px;
+            color: #f8fafc;
+            letter-spacing: -0.2px;
         }
 
         .progress-bar-container {
             width: 100%;
-            height: 6px;
-            background: rgba(168, 85, 247, 0.1);
+            height: 5px;
+            background: rgba(192, 132, 252, 0.08);
             border-radius: 10px;
             overflow: hidden;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .progress-bar {
             width: 0%;
             height: 100%;
-            background: linear-gradient(90deg, var(--primary), #c084fc);
-            box-shadow: 0 0 10px var(--primary-glow);
-            transition: width 0.2s ease;
+            background: linear-gradient(90deg, #a855f7, var(--primary));
+            box-shadow: 0 0 15px var(--primary-glow);
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .metrics {
@@ -277,129 +299,67 @@
             justify-content: space-between;
             align-items: center;
             font-size: 13px;
-            color: rgba(233, 213, 255, 0.6);
-            border-top: 1px dashed rgba(168, 85, 247, 0.2);
-            padding-top: 14px;
-            margin-top: 12px;
+            color: rgba(248, 250, 252, 0.5);
+            border-top: 1px dashed rgba(192, 132, 252, 0.12);
+            padding-top: 18px;
+        }
+
+        .metric-label {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(248, 250, 252, 0.3);
+            margin-bottom: 2px;
         }
 
         .saved-badge {
             color: var(--success);
-            font-weight: 600;
+            font-weight: 700;
             background: var(--success-glow);
-            border: 1px solid rgba(52, 211, 153, 0.2);
-            padding: 4px 12px;
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            padding: 6px 14px;
             border-radius: 50px; 
+            letter-spacing: -0.2px;
         }
 
         .btn {
             display: block;
             width: 100%;
-            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
-            color: white;
+            background: #ffffff;
+            color: #05020f;
             border: none;
-            padding: 15px;
+            padding: 16px;
             border-radius: 50px; 
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 15px;
+            font-weight: 700;
             cursor: pointer;
             margin-top: 24px;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             text-decoration: none;
             text-align: center;
-            box-shadow: 0 8px 24px -6px rgba(168, 85, 247, 0.4);
-            letter-spacing: 0.5px;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+            letter-spacing: -0.1px;
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 24px -4px rgba(168, 85, 247, 0.5),
-                        0 0 20px rgba(168, 85, 247, 0.25);
-        }
-
-        /* --- INTEGRATED AD SYSTEM LAYOUT --- */
-        .ad-offerwall-section {
-            margin-top: 35px;
-            border-top: 1px dashed rgba(168, 85, 247, 0.25);
-            padding-top: 25px;
-            text-align: center;
-        }
-
-        .ad-title {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        /* Clean Offer container matching your card system */
-        .offer-wrapper {
-            background: rgba(11, 7, 22, 0.5);
-            border: 1px solid rgba(168, 85, 247, 0.15);
-            border-radius: 20px;
-            padding: 8px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        /* Placeholders for your monetization widget code */
-        .offer-node {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 14px 18px;
-            border-radius: 14px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
-            cursor: pointer;
-        }
-
-        .offer-node:hover {
-            background: rgba(168, 85, 247, 0.05);
-            border-color: rgba(168, 85, 247, 0.25);
-            transform: translateX(2px);
-        }
-
-        .offer-meta {
-            text-align: left;
-        }
-
-        .offer-name {
-            font-size: 14px;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 2px;
-        }
-
-        .offer-desc {
-            font-size: 11px;
-            color: rgba(233, 213, 255, 0.4);
-        }
-
-        .offer-payout-tag {
-            font-size: 12px;
-            font-weight: 700;
-            color: #ffffff;
-            background: linear-gradient(135deg, #a855f7, #6e00ff);
-            padding: 6px 12px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(110, 0, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(255, 255, 255, 0.15),
+                        0 0 24px rgba(192, 132, 252, 0.2);
+            background: #f8fafc;
         }
 
         .footer {
-            margin-top: 32px;
-            font-size: 12px;
-            color: rgba(233, 213, 255, 0.35);
-            letter-spacing: 0.5px;
+            margin-top: 35px;
+            font-size: 11px;
+            color: rgba(248, 250, 252, 0.3);
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-weight: 600;
         }
 
-        @keyframes fadeIn { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: scale(1); } }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); filter: blur(4px); } to { opacity: 1; transform: scale(1); filter: blur(0px); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); filter: blur(8px); } to { opacity: 1; transform: translateY(0); filter: blur(0px); } }
     </style>
 </head>
 <body>
@@ -427,7 +387,7 @@
 
         <div class="drop-zone" id="drop-zone">
             <div class="drop-zone-icon">✨</div>
-            <div class="drop-zone-text">Drag & drop your file here or <span style="color: #c084fc; font-weight:600; text-decoration: underline;">browse</span></div>
+            <div class="drop-zone-text">Drag & drop your file here or <span style="color: var(--primary); font-weight:700; text-decoration: underline; text-underline-offset: 3px;">browse</span></div>
             <div class="drop-zone-subtext">Supports PNG, JPEG, WebP & PDF &bull; 100% Local Privacy</div>
             <input type="file" id="file-input" accept="image/*,application/pdf">
         </div>
@@ -435,46 +395,27 @@
         <div class="status-container" id="status-container">
             <div class="file-info">
                 <span class="file-name" id="file-name-display">document_file.pdf</span>
-                <span id="status-text" style="color: var(--primary); font-weight:700;">Compressing...</span>
+                <span id="status-text" style="color: var(--primary); font-weight:800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Compressing...</span>
             </div>
             <div class="progress-bar-container">
                 <div class="progress-bar" id="progress-bar"></div>
             </div>
             <div class="metrics" id="metrics" style="display: none;">
-                <div>Original: <span id="orig-size" style="color:#ffffff; font-weight: 500;">0 KB</span></div>
-                <div>Shrunk: <span id="comp-size" style="font-weight: 700; color: #ffffff;">0 KB</span></div>
+                <div>
+                    <span class="metric-label">Original</span>
+                    <span id="orig-size" style="color:#ffffff; font-weight: 600; font-size: 15px;">0 KB</span>
+                </div>
+                <div>
+                    <span class="metric-label">Optimized</span>
+                    <span id="comp-size" style="font-weight: 700; color: var(--primary); font-size: 15px;">0 KB</span>
+                </div>
                 <div><span class="saved-badge" id="saved-pct">Saved 0%</span></div>
             </div>
             <a href="#" class="btn" id="download-btn" style="display: none;">📥 Download Shrunk File</a>
         </div>
 
-        <!-- 💰 INTEGRATED NON-BANK CPA AD WORKSPACE 💰 -->
-        <div class="ad-offerwall-section">
-            <div class="ad-title">Support Server & Earn Points</div>
-            <div class="offer-wrapper">
-                
-                <!-- NOTE: Replace '#' in href with your real ad network affiliate links -->
-                <a href="#" target="_blank" class="offer-node">
-                    <div class="offer-meta">
-                        <div class="offer-name">Complete Micro Survey</div>
-                        <div class="offer-desc">Takes 1-2 minutes to check</div>
-                    </div>
-                    <div class="offer-payout-tag">+75 Pts</div>
-                </a>
-
-                <a href="#" target="_blank" class="offer-node">
-                    <div class="offer-meta">
-                        <div class="offer-name">Download Free Application</div>
-                        <div class="offer-desc">Install and run for 30s</div>
-                    </div>
-                    <div class="offer-payout-tag">+120 Pts</div>
-                </a>
-
-            </div>
-        </div>
-
         <div class="footer">
-            An Initiative By Rajveer &bull; No File Storage Limits &bull; 100% Secure
+            An Initiative By Rajveer &bull; 100% Secure Workspace
         </div>
     </div>
 
@@ -587,6 +528,7 @@
         async function compressPDF(file) {
             try {
                 progressBar.style.width = '40%';
+                
                 const fileReader = new FileReader();
                 fileReader.readAsArrayBuffer(file);
                 
@@ -594,7 +536,9 @@
                     try {
                         progressBar.style.width = '60%';
                         const existingPdfBytes = fileReader.result;
+                        
                         const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+                        
                         progressBar.style.width = '80%';
                         
                         const compressedPdfBytes = await pdfDoc.save({ 
@@ -640,7 +584,7 @@
 
         function renderSuccessMetrics(original, compressed) {
             progressBar.style.width = '100%';
-            statusText.textContent = 'Ready!';
+            statusText.textContent = 'Ready';
             statusText.style.color = 'var(--success)';
 
             const oldSizeKB = (original.size / 1024).toFixed(1);
@@ -666,21 +610,11 @@
         }
 
         function handleEngineError() {
-            statusText.textContent = 'Error!';
+            statusText.textContent = 'Error';
             statusText.style.color = '#ef4444';
             progressBar.style.width = '0%';
             alert('Compression error. Please try uploading a different file layout.');
         }
     </script>
-
-    <div style="text-align: center; margin-top: 50px; font-family: Arial, sans-serif;">
-    <h2 style="color: #333;">Create Stunning Professional Photos with AI!</h2>
-    <p style="color: #666;">Get your premium studio AI headshot instantly on your Android phone.</p>
-    
-    <a href="https://www.akamaicdn.org/view.php?id=5545424&pub=33511678" style="background-color: #007bff; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; font-size: 18px; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);">
-        Generate Your AI Headshot Now (Android Only)
-    </a>
-</div>
-
 </body>
 </html>
